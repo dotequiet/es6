@@ -8,7 +8,7 @@ js的模块加载
             因为commonJS是同步加载模块，对于服务器来说加载模块的时间就是硬盘读取文件的时间，但是对于浏览器就不一样了，
          浏览器涉及到了网速代理等原因，如果时间过长浏览器就会出现”假死“的状态。所以在浏览器不适合使用commonJS规范
          
-          AMD
+       AMD
             AMD是”Asynchronous Module Definition”的缩写，即”异步模块定义”。amd才用异步加载模块，
          模块的加载不影响dom构建，css渲染，然而，模块内部的加载时同步的加载完模块立即执行回调，
          AMD也采用require命令加载模块，但不同于commonJS，他要求两个参数：
@@ -21,12 +21,11 @@ js的模块加载
               math.add(1,2)
             })
 
-       CMD
-        CMD推荐就近加载，但需要的是时候在加载，可以吧你依赖的模块写到任何位置：
-        1、 define(factory)
-            factory为函数的时候，表示是模块的构造方法。执行构造方法，可以得到模块向外提供的接口。factory默认传入三个参数：
-        require、exoprts和module
-        
+           CMD
+             CMD推荐就近加载，但需要的是时候在加载，可以吧你依赖的模块写到任何位置：
+             1、 define(factory)
+             factory为函数的时候，表示是模块的构造方法。执行构造方法，可以得到模块向外提供的接口。factory默认传入三个参数：require、exoprts和module
+
        // CMD
       define(function(require, exports, module) {
          var a = require('./a');
