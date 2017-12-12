@@ -40,16 +40,15 @@ js的模块加载
      })
 
      AMD在使用前必须提前引入而CMD在使用的时候在引入
-     
-     ES6
-        es6通过import，export实现的模块输出。import用以获取其他模块提供的功能，export用以提供模块对外的功能接口。
-        exoprt，一个模块就是一个文件。该文件的所有变量，外部无法获取。如果外部文件希望获取该模块的变量，
-        就需要在模块内使用exoprt到输出关键字：
-        //abc.js
-        export var a = 1
-        exprot var b = 2
-        import命令可以导入其他模块通过export导出的部分。
-        imoprt {a, b} from './abc.js'
+          ES6
+             es6通过import，export实现的模块输出。import用以获取其他模块提供的功能，export用以提供模块对外的功能接口。
+             exoprt，一个模块就是一个文件。该文件的所有变量，外部无法获取。如果外部文件希望获取该模块的变量，
+             就需要在模块内使用exoprt到输出关键字：
+             //abc.js
+             export var a = 1
+             exprot var b = 2
+             import命令可以导入其他模块通过export导出的部分。
+             imoprt {a, b} from './abc.js'
 
 
 
